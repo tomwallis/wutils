@@ -3,7 +3,7 @@
 #' @name wutils
 #' @docType package
 #' @title Utility functions used by Tom Wallis.
-#' @aliases wutils-package
+#' @aliases wutils-package package-wutils
 #' @import plyr ggplot2 grid
 #' @details 
 #' Package: wutils 
