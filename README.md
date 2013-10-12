@@ -1,4 +1,4 @@
-=====wutils=====
+wutils
 ======
 
 An R package of utility functions called by many of Tom's analysis scripts.
