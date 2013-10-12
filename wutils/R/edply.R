@@ -10,10 +10,14 @@
 #' @param ... other arguments to elply function.
 #' 
 #' @details
-#' Additional arguments include \code{.progress} which defaults to "none". 
-#' This can accept a value from \code{\link{create_progress_bar}}.
-#' Second possible argument is \code{.parallel}, which defaults to \code{FALSE}. 
-#' If set to \code{TRUE}, applies function in parallel using \code{\link{foreach}}.
+#' Additional arguments: 
+#' \itemize{
+#' \item \code{.progress}, defaults to "none". This can accept a value from \code{\link{create_progress_bar}}.
+#' \item \code{.parallel}, defaults to \code{FALSE}. If set to \code{TRUE}, applies function in parallel using \code{\link{foreach}}.
+#' }
+#' 
+#' @return A data frame containing the parameter values and function output.
+#'   
 #' 
 #' @author Simon Barthelmé, University of Geneva. 
 #' @author Tom Wallis coded into package form.

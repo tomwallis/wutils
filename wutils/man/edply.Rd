@@ -12,6 +12,10 @@
 
   \item{...}{other arguments to elply function.}
 }
+\value{
+  A data frame containing the parameter values and function
+  output.
+}
 \description{
   This function allows the combination of plyr and
   expand.grid. This can be really handy when you want to,
@@ -19,12 +23,12 @@
   the shape of a function.
 }
 \details{
-  Additional arguments include \code{.progress} which
+  Additional arguments: \itemize{ \item \code{.progress},
   defaults to "none". This can accept a value from
-  \code{\link{create_progress_bar}}. Second possible
-  argument is \code{.parallel}, which defaults to
-  \code{FALSE}. If set to \code{TRUE}, applies function in
-  parallel using \code{\link{foreach}}.
+  \code{\link{create_progress_bar}}. \item
+  \code{.parallel}, defaults to \code{FALSE}. If set to
+  \code{TRUE}, applies function in parallel using
+  \code{\link{foreach}}. }
 }
 \examples{
 fun <- function(x,y) dnorm(x)*dnorm(y)*sin(x)
