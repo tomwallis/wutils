@@ -1,0 +1,23 @@
+Package: wutils
+Type: Package
+Title: Tom Wallis' utilities package
+Version: 0.1
+Date: 2013-10-11
+Author: Thomas Wallis <thomas.wallis@uni-tuebingen.de>
+Maintainer: Thomas Wallis <thomas.wallis@uni-tuebingen.de>
+Description: wutils is a utility package of code Tom Wallis commonly uses
+    across projects to produce analyses. It includes some plotting styles to
+    make plots look nice to Tom. Not all of the code in here was written
+    by Tom; attributions are in source.
+Depends:
+    R (>= 2.14),
+    plyr,
+    ggplot2
+Imports:
+    plyr,
+    ggplot2
+License: GPL-3
+Collate:
+    'edply.R'
+    'multiplot.R'
+    'wutils.R'

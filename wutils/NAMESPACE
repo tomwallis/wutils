@@ -1,0 +1,5 @@
+export(edply)
+export(multiplot)
+import(ggplot2)
+import(grid)
+import(plyr)
