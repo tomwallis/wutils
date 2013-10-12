@@ -21,3 +21,4 @@ Collate:
     'edply.R'
     'multiplot.R'
     'wutils.R'
+    'plcol.R'

@@ -1,5 +1,6 @@
 export(edply)
 export(multiplot)
+export(plcol)
 import(ggplot2)
 import(grid)
 import(plyr)
