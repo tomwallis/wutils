@@ -1,5 +1,6 @@
 \docType{package}
 \name{wutils}
+\alias{package-wutils}
 \alias{wutils}
 \alias{wutils-package}
 \title{Utility functions used by Tom Wallis.}
