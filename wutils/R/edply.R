@@ -26,6 +26,7 @@
 #' fun <- function(x,y) dnorm(x)*dnorm(y)*sin(x)
 #' d <- edply(list(x=seq(-3,3,l=40),y=seq(-3,3,l=40)),fun)
 #' colnames(d)[3] <- 'fxy'
+#' library(ggplot2)
 #' ggplot(d,aes(x,y))+geom_raster(aes(fill=fxy)) #Heatmap of f(x,y))
 
 edply <- function(vars, fun, ...)

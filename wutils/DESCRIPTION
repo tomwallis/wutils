@@ -10,9 +10,7 @@ Description: wutils is a utility package of code Tom Wallis commonly uses
     make plots look nice to Tom. Not all of the code in here was written
     by Tom; attributions are in source.
 Depends:
-    R (>= 2.14),
-    plyr,
-    ggplot2
+    R (>= 2.14)
 Imports:
     plyr,
     ggplot2
