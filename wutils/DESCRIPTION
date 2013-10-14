@@ -20,3 +20,4 @@ Collate:
     'multiplot.R'
     'wutils.R'
     'plcol.R'
+    'greyfig.R'
