@@ -24,10 +24,12 @@
   specified colour scheme.
 }
 \details{
-  Possible arguments: \itemize{ \item \code{'pleasing'}:
-  return hand-tuned pleasing colours. \item \code{'cb'}:
-  return colourblind friendly palette. \item
-  \code{'greyscale'}: return greyscale palette. }
+  Possible arguments: \itemize{ \item \code{'cb'}: return
+  colourblind friendly palette (default). \item
+  \code{'pleasing'}: return hand-tuned pleasing colours. }
+
+  If you want to make a nice greyscale ggplot2 figure, use
+  \link{greyfig}.
 }
 \examples{
 library(ggplot2)
@@ -36,10 +38,6 @@ diamonds <- diamonds[sample(nrow(diamonds),size=2000),]
 diamonds <- subset(diamonds,cut==c('Good','Very Good','Premium','Ideal'))
 fig <- ggplot(diamonds,aes(x=carat,y=price,colour=cut)) + geom_point()
 fig <- plcol(fig,palette='pleasing')
-fig
-
-# change to greyscale:
-fig <- plcol(fig,palette='greyscale')
 fig
 }
 \author{
