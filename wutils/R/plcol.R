@@ -38,8 +38,8 @@ plcol <- function(fig,palette='cb',...){
   if(palette == 'pleasing') plcol <- c('#A6CEE3','#1F78B4','#B2DF8A','#33A02C')
   # Colourblind-friendly palette with grey:
   if(palette == 'cb') plcol <- c("#E69F00", "#56B4E9", "#009E73","#0072B2", "#D55E00", "#CC79A7","#F0E442")
-  # greyscale palette:
-  if(palette == 'greyscale') plcol <- c('#222222','#555555','#777777','#999999','#bbbbbb','#dddddd')
+  # greyscale palette (not continuous):
+  if(palette == 'greyscale') plcol <- c('#000000','#333333','#666666','#999999')
   
   fig <- fig + scale_colour_manual(values=plcol,...) + scale_fill_manual(values=plcol,...)
   return(fig)
