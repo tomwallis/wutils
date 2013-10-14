@@ -1,42 +1,45 @@
 \name{plcol}
 \alias{plcol}
-\title{Generate Tom's favourite plot colours.}
+\title{Add Tom's favourite plot colours to a ggplot object.}
 \usage{
-  plcol(palette = "cbPalette")
+  plcol(fig, palette = "cb", ...)
 }
 \arguments{
+  \item{fig}{a ggplot2 object.}
+
   \item{palette}{a string argument for which colour palette
   to return.}
+
+  \item{...}{further arguments passed to
+  scale_colour_manual and scale_fill_manual (e.g. could
+  pass name='Scale name').}
 }
 \value{
-  A character vector that can be passed to ggplot2's manual
-  colour scales.
+  returns a ggplot2 object with adjusted manual colour
+  scale and fill scale.
 }
 \description{
-  This function can be called with no inputs to generate
-  Tom's commonly used colour palettes for plotting. These
-  are returned as character arrays in the workspace for use
-  in adding scales.
+  This function accepts a ggplot object and returns the
+  object with the colour and fill scales adjusted to the
+  specified colour scheme.
 }
 \details{
   Possible arguments: \itemize{ \item \code{'pleasing'}:
-  return hand-tuned pleasing colours. \item
-  \code{'cbPalette'}: return colourblind friendly palette
-  with grey. \item \code{'cbbPalette'}: return colourblind
-  friendly palette with black. \item \code{'greyscale'}:
-  return greyscale palette. }
+  return hand-tuned pleasing colours. \item \code{'cb'}:
+  return colourblind friendly palette. \item
+  \code{'greyscale'}: return greyscale palette. }
 }
 \examples{
+library(ggplot2)
 data(diamonds)
 diamonds <- diamonds[sample(nrow(diamonds),size=2000),]
+diamonds <- subset(diamonds,cut==c('Good','Very Good','Premium','Ideal'))
 fig <- ggplot(diamonds,aes(x=carat,y=price,colour=cut)) + geom_point()
-my_colours <- plcol(palette='cbbPalette')
-fig <- fig + scale_colour_manual(values=my_colours)
+fig <- plcol(fig,palette='pleasing')
 fig
 
 # change to greyscale:
-my_colours <- plcol(palette='greyscale')
-fig <- fig + scale_colour_manual(values=my_colours)
+fig <- plcol(fig,palette='greyscale')
 fig
 }
 \author{
