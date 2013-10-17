@@ -1,7 +1,7 @@
 #' Add Tom's favourite plot colours to a ggplot object.
 #' 
 #' This function accepts a ggplot object and returns the object with the colour and fill scales
-#' adjusted to the specified colour scheme.
+#' adjusted to the specified colour scheme. Also adds some useful shape values.
 #' 
 #' @export  
 #' 
@@ -35,8 +35,9 @@ plcol <- function(fig,palette='cb',...){
   if(palette == 'pleasing') plcol <- c('#A6CEE3','#1F78B4','#B2DF8A','#33A02C')
   # Colourblind-friendly palette with grey:
   if(palette == 'cb') plcol <- c("#E69F00", "#56B4E9", "#009E73","#0072B2", "#D55E00", "#CC79A7","#F0E442")
+  shape_values <- c(21,22,23,24)
   
-  fig <- fig + scale_colour_manual(values=plcol,...) + scale_fill_manual(values=plcol,...)
+  fig <- fig + scale_colour_manual(values=plcol,...) + scale_fill_manual(values=plcol,...) + scale_shape_manual(values=shape_values,...)
   return(fig)
 }
 

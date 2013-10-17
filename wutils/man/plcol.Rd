@@ -21,7 +21,8 @@
 \description{
   This function accepts a ggplot object and returns the
   object with the colour and fill scales adjusted to the
-  specified colour scheme.
+  specified colour scheme. Also adds some useful shape
+  values.
 }
 \details{
   Possible arguments: \itemize{ \item \code{'cb'}: return
