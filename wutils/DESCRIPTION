@@ -21,3 +21,4 @@ Collate:
     'wutils.R'
     'plcol.R'
     'greyfig.R'
+    'density_axes.R'

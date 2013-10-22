@@ -1,3 +1,4 @@
+export(density_axes)
 export(edply)
 export(greyfig)
 export(multiplot)
